@@ -1,6 +1,6 @@
 <?php
 ///////////////////////////////////////
-// ホームコントローラー
+// todoコントローラー
 ///////////////////////////////////////
 include_once '../config.php';
 include_once '../util.php';
@@ -13,6 +13,13 @@ if(!$user) {
     exit;
 }
 
-$view_cards = findCards($user);
+if(isset($_GET['card_id']) && $_GET['card_id'] !== '') {
+    $requested_card_id = $_GET['card_id'];
+} else {
+    header('Location: ' .HOME_URL. 'Controllers/home.php');
+    exit;
+}
 
-include_once '../Views/home.php';
+$view_card = findCard($requested_card_id);
+
+include_once '../Views/todo.php';

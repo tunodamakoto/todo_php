@@ -13,6 +13,18 @@ if(!$user) {
     exit;
 }
 
-$view_cards = findCards($user);
+// カード作成
+if(isset($_POST['card']) && isset($_POST['color'])) {
+    $data = [
+        'user_id' => $user['id'],
+        'card' => $_POST['card'],
+        'color' => $_POST['color']
+    ];
 
-include_once '../Views/home.php';
+    if(createCard($data)) {
+        header('Location: ' .HOME_URL. 'Controllers/home.php');
+        exit;
+    }
+}
+
+include_once '../Views/create.php';
