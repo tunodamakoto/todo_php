@@ -1,0 +1,315 @@
+body{
+    font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+    background-color: #fff;
+    color: #444;
+}
+
+.header{
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.header-inner{
+    max-width: 1020px;
+    margin: 0 auto;
+    position: relative;
+    height: 73px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.header-logo svg{
+    width: 202px;
+    height: 32px;
+}
+.header-menu{
+    display: -webkit-flex;
+	display: flex;
+    gap: 40px;
+}
+.header-menu li{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.content{
+    margin: 60px 0;
+}
+.content-inner{
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.content-inner.grid{
+    column-count: 2;
+    column-gap: 30px;
+    column-fill: balance;
+}
+.content-inner.todo{
+    max-width: 640px;
+}
+.content-inner.edit{
+    max-width: 640px;
+}
+.content-inner.sign{
+    max-width: 640px;
+}
+
+.card{
+    display: inline-block;
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px -2px rgba(10,10,10,0.1), 5px 5px 6px 3px rgba(10,10,10,0.05);
+    break-inside: avoid;
+    margin-bottom: 30px;
+    transition: .3s;
+}
+.card:hover{
+    box-shadow: 0px 8px 16px -2px rgba(10,10,10,0.1), 11px 11px 10px 7px rgba(10,10,10,0.1);
+}
+.card-ttl{
+    font-size: 19px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dadada;
+    margin-bottom: 20px;
+}
+.card-list li{
+    display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.todo-head{
+    display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-align-items: center;
+	align-items: center;
+    margin-bottom: 8px;
+}
+.todo-delete{
+    font-size: 14px;
+    color: #aaaaaa;
+}
+.todo-delete::before{
+    content: "\f1f8";
+    font-family: FontAwesome;
+    font-weight: 900;
+    padding-right: 5px;
+    color: #aaaaaa;
+}
+.todo-edit{
+    font-size: 14px;
+    color: #aaaaaa;
+}
+.todo-edit::before{
+    content: "\f055";
+    font-family: FontAwesome;
+    font-weight: 900;
+    padding-right: 5px;
+    color: #aaaaaa;
+}
+.todo-card{
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px -2px rgba(10,10,10,0.1), 5px 5px 6px 3px rgba(10,10,10,0.05);
+}
+.todo-card-ttl{
+    font-size: 19px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dadada;
+    margin-bottom: 20px;
+}
+.todo-card-form{
+    margin-bottom: 20px;
+}
+.todo-card-form input{
+    background-color: #fff;
+    color: rgba(0,0,0,.7);
+    max-width: 360px;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+.todo-card-form button{
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #444;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 5px;
+}
+.todo-card-list li{
+    display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.edit-head{
+    margin-bottom: 8px;
+}
+.edit-delete{
+    font-size: 14px;
+    color: #aaaaaa;
+}
+.edit-delete::before{
+    content: "\f1f8";
+    font-family: FontAwesome;
+    font-weight: 900;
+    padding-right: 5px;
+    color: #aaaaaa;
+}
+.edit-card{
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px -2px rgba(10,10,10,0.1), 5px 5px 6px 3px rgba(10,10,10,0.05);
+}
+.edit-card-ttl{
+    font-size: 19px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dadada;
+    margin-bottom: 20px;
+}
+.edit-card-text label{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.edit-card-text input[type="text"]{
+    width: 100%;
+    background-color: #fff;
+    color: rgba(0,0,0,.7);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.edit-card-color{
+    position: relative;
+    margin-bottom: 30px;
+}
+.edit-card-color::before{
+    position: absolute;
+    top: 70%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #444;
+}
+.edit-card-color span{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.edit-card-color select, option{
+    background-color: #fff;
+    width: 100%;
+    color: rgba(0,0,0,.7);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.edit-card-btn{
+    display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.edit-card-btn .btn{
+    display: inline-block;
+    max-width: 180px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+.edit-card-btn a{
+    background-color: #fff;
+    border: 1px solid #444;
+}
+.edit-card-btn button{
+    color: #fff;
+    background-color: #444;
+}
+
+.sign-card{
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px -2px rgba(10,10,10,0.1), 5px 5px 6px 3px rgba(10,10,10,0.05);
+}
+.sign-card-ttl{
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dadada;
+    margin-bottom: 20px;
+}
+.sign-card-text label{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.sign-card-text input{
+    width: 100%;
+    background-color: #f4f4f4;
+    color: rgba(0,0,0,.7);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.sign-card-btn{
+    display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+.sign-card-btn button{
+    display: inline-block;
+    max-width: 180px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 25px;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #444;
+}
