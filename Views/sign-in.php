@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <?php include_once('../Views/common/head.php'); ?>
     <title>TO DO</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header-inner">
-            <h1 class="header-logo"><svg><use xlink:href="img/file.svg#logo"></use></svg></h1>
-            <ul class="header-menu">
-                <li><a href="">Login</a></li>
-                <li><a href="">Register</a></li>
-            </ul>
-        </div>
-    </header>
+    <?php include_once('../Views/common/header.php'); ?>
     <main class="content">
         <div class="content-inner sign">
             <div class="sign-card">
@@ -25,11 +13,11 @@
                 <form action="" method="post" class="sign-card-form">
                     <div class="sign-card-text">
                         <label for="email">メールアドレス</label>
-                        <input type="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div class="sign-card-text">
                         <label for="password">パスワード</label>
-                        <input type="password" id="password">
+                        <input type="password" name="password" id="password" required>
                     </div>
                     <div class="sign-card-btn">
                         <button type="submit">ログイン</button>
@@ -38,7 +26,6 @@
             </div>
         </div>
     </main>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
-<script src="https://kit.fontawesome.com/2f0c88f93d.js" crossorigin="anonymous"></script>
+    <?php include_once('../Views/common/foot.php'); ?>
 </body>
 </html>

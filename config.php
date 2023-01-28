@@ -6,5 +6,7 @@ define('HOME_URL', '/demo_php/todo_php/');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
-define('DB_NAME', 'todo');
+define('DB_NAME', 'todo_php');
+// 初期化
+$user = null;
 ?>

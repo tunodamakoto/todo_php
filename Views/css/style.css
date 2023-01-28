@@ -313,3 +313,10 @@ body{
     color: #fff;
     background-color: #444;
 }
+
+.error-message{
+    margin-bottom: 10px;
+    color: #ef072d;
+    font-weight: 700;
+    font-size: 14px;
+}
