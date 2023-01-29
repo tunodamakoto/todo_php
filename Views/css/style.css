@@ -320,3 +320,8 @@ body{
     font-weight: 700;
     font-size: 14px;
 }
+
+.done{
+    text-decoration: line-through;
+    color: #aaaaaa;
+}

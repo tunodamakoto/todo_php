@@ -158,14 +158,14 @@ function findCards(array $user)
         return false;
     }
 
-    $card = $result->fetch_all(MYSQLI_ASSOC);
+    $cards = $result->fetch_all(MYSQLI_ASSOC);
 
-    if(!$card) {
+    if(!$cards) {
         $mysqli->close();
-        return false;
+        return null;
     }
 
     $mysqli->close();
 
-    return $card;
+    return $cards;
 }
