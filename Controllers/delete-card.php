@@ -5,7 +5,9 @@
 include_once '../config.php';
 include_once '../util.php';
 include_once '../Models/cards.php';
+include_once '../Models/todos.php';
 
+// カード削除
 if(!empty($_GET['card_id'])) {
     $card_id = $_GET['card_id'];
     if(deleteCard($card_id)) {

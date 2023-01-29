@@ -12,20 +12,16 @@
                 <?php foreach($view_cards as $view_card): ?>
                     <a href="todo.php?card_id=<?php echo htmlspecialchars($view_card['id']); ?>" class="card" style="background:<?php echo htmlspecialchars($view_card['color']); ?>;">
                         <h2 class="card-ttl"><?php echo htmlspecialchars($view_card['card']); ?></h2>
-                        <ul class="card-list">
-                            <li>
-                                <input type="checkbox" id="check-5-1">
-                                <label for="check-5-1">読書</span>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="check-5-2">
-                                <label for="check-5-2">個人開発</span>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="check-5-3">
-                                <label for="check-5-3">スーパーで買い物</span>
-                            </li>
-                        </ul>
+                        <?php if(findTodos($user['id'], $view_card['id'])): ?>
+                            <ul class="todo-card-list">
+                            <?php foreach(findTodos($user['id'], $view_card['id']) as $view_todo): ?>
+                                <li>
+                                    <input type="checkbox" name="todo-check" class="checked" id="check-<?php echo htmlspecialchars($view_todo['card_id']); ?>-<?php echo htmlspecialchars($view_todo['id']); ?>">
+                                    <label class="checked-text" for="check-<?php echo htmlspecialchars($view_todo['card_id']); ?>-<?php echo htmlspecialchars($view_todo['id']); ?>"><?php echo htmlspecialchars($view_todo['todo']); ?></span>
+                                </li>
+                            <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
                     </a>
                 <?php endforeach; ?>
             <?php endif; ?>

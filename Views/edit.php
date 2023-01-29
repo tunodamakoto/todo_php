@@ -9,7 +9,7 @@
     <main class="content">
         <div class="content-inner edit">
             <div class="edit-head">
-                <a href="delete.php?card_id=<?php echo htmlspecialchars($view_card['id']); ?>" class="edit-delete">カードを削除</a>
+                <a href="delete-card.php?card_id=<?php echo htmlspecialchars($view_card['id']); ?>" class="edit-delete">カードを削除</a>
             </div>
             <?php if(isset($view_card)): ?>
                 <div class="edit-card" style="background:<?php echo htmlspecialchars($view_card['color']); ?>;">
